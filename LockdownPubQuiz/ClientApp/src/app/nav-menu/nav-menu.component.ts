@@ -46,4 +46,8 @@ export class NavMenuComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  adminNav(){
+    this.router.navigate(['/admin']);
+  }
+
 }

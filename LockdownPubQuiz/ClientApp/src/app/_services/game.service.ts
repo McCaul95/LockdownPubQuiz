@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, ObservableInput } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import {User} from '../_models/User';
+import {AddQuestion} from '../_models/AddQuestion';
 
 
 @Injectable({ providedIn: 'root' })
@@ -22,12 +23,12 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    login(model) {
+    addQuestions(model: AddQuestion) {
       try{
         localStorage.removeItem('access_token');
         const tokenHeader = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('access_token'), 'Content-Type': 'application/json' });
         const body = JSON.stringify(model);
-          let API_URL = `${this.apiUrl}/api/Authenticate/login`;
+          let API_URL = `${this.apiUrl}/api/Game/add-question`;
             return this.http.post<{token:  string}>(API_URL, body, {'headers':tokenHeader}).pipe(tap(res => {
               localStorage.setItem('access_token', res.token);
           })); 
@@ -36,30 +37,8 @@ export class AuthenticationService {
 
       }
      
-      return ;
+      return;
        
     }
 
-
-    register(model) {
-      try{
-        const tokenHeader = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('access_token'), 'Content-Type': 'application/json' });
-        const body = JSON.stringify(model);
-          let API_URL = `${this.apiUrl}/api/Authenticate/register`;
-            return this.http.post<{token:  string}>(API_URL, body, {'headers':tokenHeader}).pipe(tap(res => {
-          })); 
-      } 
-      catch(ex){
-
-      }
-     
-      return ;
-       
-    }
-
-    logout() {
-        // remove user from local storage to log user out
-        localStorage.removeItem('currentUser');
-        this.currentUserSubject.next(null);
-    }
 }

@@ -1,13 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { first, map } from 'rxjs/operators';
 import {AuthenticationService} from '../_services/auth.service';
-import { ɵparseCookieValue } from '@angular/common';
-import { Token } from '@angular/compiler/src/ml_parser/lexer';
-import {User} from '../_models/User'
-import { JwtResponse } from '../_models/JwtResponse';
-import { Subscriber, Observable } from 'rxjs';
 
 
 
@@ -59,7 +53,7 @@ export class LoginComponent implements OnInit {
 
 
   navRegister(){
-    this.router.navigate(["/register"]);
+    this.router.navigate(["register"]);
   }
 
 }
