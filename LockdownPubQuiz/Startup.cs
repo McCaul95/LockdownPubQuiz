@@ -4,13 +4,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using LockdownPubQuiz.DAL.Configurations;
 using Microsoft.AspNetCore.Identity;
 using LockdownPubQuiz.DAL.Authentication;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Glossary
@@ -24,16 +24,16 @@ namespace Glossary
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
-            services.AddControllers();
+           
+           services.AddCors();
+           services.AddControllers();
 
             services.AddAutoMapper(typeof(Startup));
 
 
-            services.AddDbContext<LockdownPubQuizDbContext>(options => options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False", x => x.MigrationsAssembly("LockdownPubQuiz.DAL.Migrations")));
+            services.AddDbContext<LockdownPubQuizDbContext>(options => options.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False", x => x.MigrationsAssembly("LockdownPubQuiz.DAL.Migrations")));
             services.AddIdentity<ApplicationUser, IdentityRole>()
 
                .AddEntityFrameworkStores<LockdownPubQuizDbContext>()
@@ -70,6 +70,7 @@ namespace Glossary
                 options.SwaggerDoc("v1", new OpenApiInfo { Title = "LockdownPubQuiz", Version = "v1" });
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, LockdownPubQuizDbContext dbContext)

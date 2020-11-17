@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-using LockdownPubQuiz.Core.Repositories;
+﻿using LockdownPubQuiz.Core.Repositories;
 
 namespace LockdownPubQuiz.Core.Models
   { 

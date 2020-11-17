@@ -4,6 +4,58 @@
     "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.DAL\\LockdownPubQuiz.DAL.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\LockdownPubQuiz.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\LockdownPubQuiz.Core.csproj",
+        "projectName": "LockdownPubQuiz.Core",
+        "projectPath": "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\LockdownPubQuiz.Core.csproj",
+        "packagesPath": "C:\\Users\\Oisin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Oisin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.DAL\\LockdownPubQuiz.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +78,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\LockdownPubQuiz.Core.csproj": {
+                "projectPath": "C:\\Users\\Oisin\\source\\repos\\LockdownPubQuiz\\LockdownPubQuiz.Core\\LockdownPubQuiz.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -57,6 +113,10 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             }
           },
           "imports": [

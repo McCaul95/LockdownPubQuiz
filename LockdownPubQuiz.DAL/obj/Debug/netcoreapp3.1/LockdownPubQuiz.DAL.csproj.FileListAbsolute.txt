@@ -1,5 +1,12 @@
 C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\bin\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.deps.json
 C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\bin\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.dll
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\bin\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.pdb
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\bin\Debug\netcoreapp3.1\LockdownPubQuiz.Core.dll
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\bin\Debug\netcoreapp3.1\LockdownPubQuiz.Core.pdb
 C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.csprojAssemblyReference.cache
 C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.AssemblyInfoInputs.cache
 C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.AssemblyInfo.cs
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.csproj.CopyComplete
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.dll
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.pdb
+C:\Users\Oisin\source\repos\LockdownPubQuiz\LockdownPubQuiz.DAL\obj\Debug\netcoreapp3.1\LockdownPubQuiz.DAL.csproj.CoreCompileInputs.cache

@@ -1,18 +1,49 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
-  styleUrls: ['./nav-menu.component.css']
+  styleUrls: ['./nav-menu.component.scss']
 })
-export class NavMenuComponent {
-  isExpanded = false;
+export class NavMenuComponent implements OnInit {
 
-  collapse() {
-    this.isExpanded = false;
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+
+    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+  
+      // Add a click event on each of them
+      $navbarBurgers.forEach(function ($el) {
+        $el.addEventListener('click', function () {
+  
+          // Get the "main-nav" element
+          var $target = document.getElementById('main-nav');
+  
+          // Toggle the class on "main-nav"
+          $target.classList.toggle('hidden');
+  
+        });
+      });
+    }
   }
 
-  toggle() {
-    this.isExpanded = !this.isExpanded;
+
+
+  homeNav(){
+    this.router.navigate(['/home']);
   }
+
+  resourceNav(){
+    this.router.navigate(['/resources']);
+  }
+
+  loginNav(){
+    this.router.navigate(['/login']);
+  }
+
 }
