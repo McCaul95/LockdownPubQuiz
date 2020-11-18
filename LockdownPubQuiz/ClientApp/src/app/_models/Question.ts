@@ -1,7 +1,7 @@
 import {Role} from './Role'
 import {Answer} from './Answer';
 
-export interface AddQuestion {
+export interface Question {
     id: number;
     text: string;
     answers: Array<Answer>; 

@@ -1,18 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper.Configuration;
 using LockdownPubQuiz.Core;
-using LockdownPubQuiz.Core.Models;
 using LockdownPubQuiz.Core.Repositories;
 using LockdownPubQuiz.DAL.Authentication;
 using LockdownPubQuiz.DAL.Configurations;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace LockdownPubQuiz.Controllers
 {
@@ -35,10 +33,28 @@ namespace LockdownPubQuiz.Controllers
             _configuration = configuration;
         }
 
-        [Authorize]
+
+
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("get-games")]
+        public IActionResult GetGames()
+        {
+            try
+            {
+                List<Game> gamesList = new List<Game>();
+                return Ok(gamesList);
+            }
+            catch (Exception ex)
+            {
+                return (IActionResult)ex;
+            }
+        }
+
+        [AllowAnonymous]
         [HttpPost]
         [Route("join-game")]
-        public async Task<IActionResult> JoinGame([FromBody] Player model)
+        public async Task<IActionResult> JoinGame([FromBody] Game model)
         {
             try
             {
@@ -52,7 +68,7 @@ namespace LockdownPubQuiz.Controllers
             }
         }
 
-        [Authorize]
+        [AllowAnonymous]
         [HttpPost]
         [Route("add-question")]
         public async Task<IActionResult> AddQuestion([FromBody] Question model)
@@ -69,7 +85,7 @@ namespace LockdownPubQuiz.Controllers
             }
         }
 
-        [Authorize]
+        [AllowAnonymous]
         [HttpPost]
         [Route("create-game")]
         public async Task<IActionResult> CreateGame([FromBody] Game model)

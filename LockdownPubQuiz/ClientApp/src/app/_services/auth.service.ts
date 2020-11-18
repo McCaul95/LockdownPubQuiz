@@ -22,7 +22,7 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    login(model) {
+    login(model: User) {
       try{
         localStorage.removeItem('access_token');
         const tokenHeader = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('access_token'), 'Content-Type': 'application/json' });
